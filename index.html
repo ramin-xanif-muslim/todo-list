@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+        <link rel="stylesheet" href="index.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <h1 class="text-center text-2xl font-bold">Todo List using JavaScript</h1>
+        <div class="w-[380px] p-3 mx-auto">
+            <form id="form" class="flex border border-gray-300 rounded">
+                <input
+                    id="input"
+                    class="flex-1 p-2 outline-none rounded h-[40px]"
+                    type="text"
+                />
+                <button
+                    type="submit"
+                    class="bg-green-500 size-[40px] p-2 border-l border-gray-300 rounded-r"
+                >
+                    <i class="fa-solid text-white fa-plus"></i>
+                </button>
+            </form>
+
+            <div id="taskStatusContent" class="flex mt-3 gap-3">
+                <button
+                    data-status=""
+                    class="size-10 border flex-1 rounded bg-gray-200"
+                >
+                    All
+                </button>
+                <button data-status="1" class="size-10 border flex-1 rounded">
+                    Completed
+                </button>
+                <button data-status="0" class="size-10 border flex-1 rounded">
+                    Pending
+                </button>
+            </div>
+
+            <div id="taskContent" class="mt-3 space-y-2"></div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
